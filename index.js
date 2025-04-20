@@ -10,15 +10,15 @@ let weather = {
     },
     displayWeather: function (data) {
         const city = document.querySelector('.city');
-        city.innerHTML = 'Weather in ' + data.name
+        city.innerHTML = 'Weather in ' + data.name;
         const weatherContainer = document.querySelector('.weather');
-        weatherContainer.classList.remove('loading')
+        weatherContainer.classList.remove('loading');
         const temperature = document.querySelector('.temp');
         temperature.innerHTML = data.main.temp + " °C";
         const describe = document.querySelector('.description');
         describe.textContent = data.weather[0].description;
         const imgIcon = document.querySelector('.icon');
-        imgIcon.src = "https://openweathermap.org/img/wn/" + data.weather[0].icon + ".png"
+        imgIcon.src = "https://openweathermap.org/img/wn/" + data.weather[0].icon + ".png";
         const humid = document.querySelector('.humidity');
         humid.textContent = "Humidity: " + data.main.humidity + "%";
         const windSpeed = document.querySelector('.wind');
